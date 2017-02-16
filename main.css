@@ -1,13 +1,8 @@
-/* @import "normalize.css"; */
-
 div {
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
-}
-
-* {
+  font-weight: 100;
   box-sizing: border-box;
-  border-color: #999999;
 }
 
 .calculator-container {
@@ -22,8 +17,15 @@ div {
   margin: -200px 0 0 -150px;
 }
 
+.calculator-row {
+  display: flex;
+  flex-direction: row;
+}
+
 .calculator-display {
   border-radius: 5px 5px 0px 0px;
+  border-left: solid #808080 1px;
+  border-right: solid #808080 1px;
   background-color: #999999;
   color: #ffffff;
   display: flex;
@@ -32,7 +34,7 @@ div {
   justify-content: flex-end;
   align-items: flex-end;
   height: 80px;
-  width: 235px;
+  width: 232px;
 }
 
 .calculator-display span {
@@ -41,6 +43,7 @@ div {
 }
 
 button {
+  font-family: 'Roboto', sans-serif;
   background: none;
   color: #000000;
   outline: none;
@@ -54,41 +57,40 @@ button:active :focus {
   border: none;
 }
 
-.calculator-button {
-  background-color: #e0e0e0;
-  text-align: center;
-  height: 48px;
-  width: 58px;
-  margin: .5px;
+#calc-op-style {
+  color: #ffffff;
 }
 
-.calculator-opbutton {
-  background-color: #f5923e;
-  text-align: center;
+.calculator-button {
+  background-color: #e0e0e0;
+  border-left: solid #808080 .5px;
+  border-bottom: solid #808080 .5px;
   height: 48px;
   width: 58px;
-  margin: .5px;
+  text-align: center;
+}
+
+.calculator-operatorbutton {
+  background-color: #f5923e;
+  color: #ffffff;
+  border-right: solid #808080 .5px;
 }
 
 .calculator-button:active {
-  background-color: #8e8e8e;
+  background-color: #a6a6a6;
 }
 
-.calculator-opbutton:active {
-  background-color: #8e8e8e;
+.calculator-operatorbutton:active {
+  background-color: #cc6600;
 }
 
 .equalbutton {
-  border-radius: 0px 0px 5px 0px;
+  border-bottom-right-radius: 5px;
 }
 
 .zerobutton {
-  border-radius: 0px 0px 0px 5px;
-  width: 117px;
-  align-items: flex-end;
-}
-
-.calculator-row {
-  display: flex;
-  flex-direction: row;
+  border-bottom-left-radius: 5px;
+  width: 116px;
+  justify-content: flex-start;
+  text-indent: -58px;
 }
