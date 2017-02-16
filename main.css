@@ -1,26 +1,94 @@
-@import 'normalize.css';
-@font-face {
-  font-family: "Roboto", sans-serif;
-  src: url(https://fonts.googleapis.com/css?family=Roboto)
+/* @import "normalize.css"; */
+
+div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: #999999;
 }
 
 .calculator-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  position: absolute;
+  height: 320px;
+  width: 240px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -150px;
 }
 
 .calculator-display {
-  background-color: #8e8e8e;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #999999;
   color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  font-size: 48px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 80px;
+  width: 235px;
+}
+
+.calculator-display span {
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+button {
+  background: none;
+  color: #000000;
+  outline: none;
+  border: none;
+  font-size: 1em;
+  padding: 12px;
+}
+
+button:active :focus {
+  outline: none;
+  border: none;
 }
 
 .calculator-button {
   background-color: #e0e0e0;
-  color: #000000;
+  text-align: center;
+  height: 48px;
+  width: 58px;
+  margin: .5px;
 }
 
-.calculator-operator-button {
+.calculator-opbutton {
   background-color: #f5923e;
-  color: #ffffff;
+  text-align: center;
+  height: 48px;
+  width: 58px;
+  margin: .5px;
+}
+
+.calculator-button:active {
+  background-color: #8e8e8e;
+}
+
+.calculator-opbutton:active {
+  background-color: #8e8e8e;
+}
+
+.equalbutton {
+  border-radius: 0px 0px 5px 0px;
+}
+
+.zerobutton {
+  border-radius: 0px 0px 0px 5px;
+  width: 117px;
+  align-items: flex-end;
+}
+
+.calculator-row {
+  display: flex;
+  flex-direction: row;
 }
